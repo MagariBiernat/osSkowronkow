@@ -1,0 +1,147 @@
+@import "../styles/mixins";
+.Wrapper {
+  width: 100vw;
+  background: rgba(43, 43, 43, 0.1);
+}
+
+.Content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+
+  @include customMaxBreakPoint(1055) {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    justify-content: center;
+  }
+
+  a {
+    width: 55%;
+    cursor: pointer;
+
+    @include customMaxBreakPoint(1270) {
+      width: 50%;
+    }
+
+    @include customMaxBreakPoint(1140) {
+      width: 45%;
+    }
+
+    @include customMaxBreakPoint(1055) {
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  > div {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 45%;
+    background: url("./../public/images/Contact.png");
+    background-position: top right;
+    padding: 30px 40px;
+    background: #f2f2f2;
+    padding-bottom: 92px;
+
+    @include customMaxBreakPoint(1270) {
+      width: 60%;
+    }
+
+    @include customMaxBreakPoint(1140) {
+      width: 65%;
+    }
+
+    @include customMaxBreakPoint(1055) {
+      width: 100%;
+    }
+
+    ::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 120%;
+      height: 86px;
+      background: transparentize($color: #2b2b2b, $amount: 0.7);
+
+      @include customMaxBreakPoint(1055) {
+        width: 100%;
+      }
+    }
+
+    h1 {
+      font-family: "Nexa";
+      font-size: 32px;
+      line-height: 43px;
+      text-align: center;
+      font-weight: normal;
+
+      @include smMaxBreakPoint {
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+
+    > img {
+      width: 420px;
+      text-align: right;
+      margin: 6px 0 22px auto;
+
+      @include smMaxBreakPoint {
+        width: 320px;
+      }
+    }
+
+    .Date {
+      text-transform: uppercase;
+      font-family: Nexa;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 31px;
+
+      @include smMaxBreakPoint {
+        font-size: 20px;
+        line-height: 26px;
+      }
+    }
+
+    > div {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-top: 6px;
+
+      img {
+        width: 32px;
+        height: 32px;
+
+        @include smMaxBreakPoint {
+          width: 26px;
+          height: 26px;
+        }
+      }
+
+      p {
+        margin-left: 16px;
+        font-size: 24px;
+        line-height: 29px;
+
+        @include smMaxBreakPoint {
+          font-size: 18px;
+          line-height: 23px;
+        }
+      }
+    }
+  }
+}
+
+.Bold {
+  font-weight: bold;
+}

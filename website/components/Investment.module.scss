@@ -1,0 +1,174 @@
+@import "../styles/mixins";
+.Wrapper {
+  width: 100vw;
+  background: rgba(43, 43, 43, 0.1);
+  padding: 24px;
+
+  @include customMaxBreakPoint(1160) {
+    padding-top: 64px;
+  }
+
+  @include lgMaxBreakPoint {
+    padding-top: 102px;
+  }
+
+  @include mdMaxBreakPoint {
+    padding-top: 122px;
+  }
+
+  @include smMaxBreakPoint {
+    padding-top: 148px;
+  }
+}
+
+.Content {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include mdMaxBreakPoint {
+    width: 85%;
+  }
+
+  > img {
+    @include mdMaxBreakPoint {
+      width: 182px;
+    }
+
+    @include smMaxBreakPoint {
+      width: 162px;
+    }
+  }
+}
+
+.Description {
+  max-width: 840px;
+  margin: 24px 0;
+
+  p {
+    text-align: center;
+  }
+}
+
+.Bold {
+  font-weight: bold;
+}
+
+.MarginTop {
+  margin-top: 16px;
+}
+
+.Details {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 64px;
+
+  @include customMaxBreakPoint(1160) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include customMaxBreakPoint(990) {
+  }
+
+  @include lgMaxBreakPoint {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 38px;
+    row-gap: 32px;
+    grid-auto-rows: 1fr;
+  }
+
+  @include mdMaxBreakPoint {
+  }
+
+  @include smMaxBreakPoint {
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    * {
+      text-align: center;
+      margin-top: 16px;
+
+      @include mdMaxBreakPoint {
+        margin-top: 12px;
+      }
+
+      @include smMaxBreakPoint {
+        margin-top: 10px;
+      }
+    }
+
+    img {
+      @include lgMaxBreakPoint {
+        width: 62px;
+      }
+
+      @include mdMaxBreakPoint {
+        width: 52px;
+      }
+
+      @include smMaxBreakPoint {
+        width: 46px;
+      }
+    }
+
+    p:nth-of-type(1) {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 24px;
+      height: 30px;
+      text-transform: uppercase;
+
+      @include customMaxBreakPoint(1160) {
+        font-size: 22px;
+        line-height: 22px;
+      }
+      @include lgMaxBreakPoint {
+        font-size: 20px;
+        line-height: 20px;
+      }
+
+      @include mdMaxBreakPoint {
+        font-size: 16px;
+        line-height: 16px;
+      }
+
+      @include smMaxBreakPoint {
+        font-size: 14px;
+        line-height: 14px;
+      }
+    }
+
+    p:nth-of-type(2) {
+      font-size: 24px;
+      line-height: 29px;
+
+      @include customMaxBreakPoint(1160) {
+        font-size: 22px;
+        line-height: 25px;
+      }
+      @include lgMaxBreakPoint {
+        font-size: 20px;
+        line-height: 23px;
+      }
+
+      @include mdMaxBreakPoint {
+        font-size: 18px;
+        line-height: 21px;
+      }
+
+      @include smMaxBreakPoint {
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+  }
+}

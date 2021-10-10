@@ -1,0 +1,248 @@
+@import "../styles/mixins";
+
+.Wrapper {
+  width: 100vw;
+  padding: 24px 0;
+  position: relative;
+}
+
+.Content {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include lgMaxBreakPoint {
+    width: 90%;
+  }
+}
+
+.ContentTopLogo {
+  max-width: 128px;
+}
+
+.ContentTopTitle {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 52px;
+  line-height: 52px;
+  margin: 24px;
+  text-align: center;
+
+  @include lgMaxBreakPoint {
+    font-size: 48px;
+    line-height: 48px;
+    margin: 16px;
+  }
+}
+
+.ContentImage {
+  width: 100%;
+}
+
+.ContentP {
+  font-size: 36px;
+  line-height: 43px;
+  margin: 32px;
+  text-align: center;
+
+  @include lgMaxBreakPoint {
+    font-size: 32px;
+    line-height: 39px;
+    margin: 26px;
+  }
+
+  @include mdMaxBreakPoint {
+    font-size: 24px;
+    font-size: 29px;
+    margin-bottom: 6px;
+  }
+}
+
+.ContentButtonsContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+
+  @include mdMaxBreakPoint {
+    flex-direction: column;
+  }
+
+  button {
+    padding: 6px 96px;
+    font-weight: 800;
+    font-size: 16px;
+
+    @include mdMaxBreakPoint {
+      margin-top: 16px;
+      width: 6px 48px;
+    }
+  }
+}
+
+.TableWrapper {
+  width: 100vw;
+  background: rgba(43, 43, 43, 0.1);
+  padding: 6px;
+  text-align: center;
+  padding-bottom: 64px;
+  overflow: hidden;
+
+  position: relative;
+
+  @include customMinBreakPoint(769) {
+    table {
+      width: 80%;
+      margin: 0 auto;
+      border-collapse: collapse;
+      font-family: "Nexa";
+      overflow-x: auto;
+    }
+
+    thead {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    tr {
+      border-bottom: 1px solid #000;
+    }
+
+    td {
+      font-size: 14px;
+      font-weight: 400;
+    }
+    td,
+    th {
+      padding: 22px;
+    }
+
+    img {
+      cursor: pointer;
+      vertical-align: middle;
+    }
+  }
+
+  @include lgMaxBreakPoint {
+    height: 900px;
+
+    &.Active {
+      height: auto;
+    }
+    table {
+      border-collapse: collapse;
+      width: 90%;
+      margin: 0 auto;
+      font-family: "Nexa";
+      overflow-x: auto;
+      font-size: 16px;
+
+      img {
+        width: 28px;
+      }
+
+      @include mdMaxBreakPoint {
+        font-size: 14px;
+
+        img {
+          width: 24px;
+          vertical-align: middle;
+          margin-top: -4px;
+        }
+      }
+    }
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+      display: block;
+    }
+
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+
+    tr:nth-of-type(odd) {
+      background: #bbb;
+    }
+
+    tr {
+      padding: 4px;
+      border: 1px solid #ccc;
+    }
+
+    td {
+      /* Behave  like a "row" */
+      border: none;
+      // border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 50% !important;
+    }
+
+    td,
+    th {
+      padding: 22px;
+    }
+
+    td:before {
+      /* Now like a table header */
+      position: absolute;
+      /* Top/left values mimic padding */
+      top: 6px;
+      left: 6px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+    }
+
+    td:before {
+      padding: 15px;
+      font-weight: bold;
+    }
+
+    td:nth-of-type(1):before {
+      content: "Numer";
+    }
+    td:nth-of-type(2):before {
+      content: "Poziom";
+    }
+    td:nth-of-type(3):before {
+      content: "Metraż (mkw)";
+    }
+    td:nth-of-type(4):before {
+      content: "Ogród (mkw)";
+    }
+    td:nth-of-type(5):before {
+      content: "Status";
+    }
+    td:nth-of-type(6):before {
+      content: "Podgląd";
+    }
+    td:nth-of-type(7):before {
+      content: "Zapytaj";
+    }
+  }
+}
+
+.ShowMore {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  padding: 6px 48px;
+  font-size: 16px;
+  z-index: 20;
+
+  display: none;
+  @include lgMaxBreakPoint {
+    display: block;
+  }
+}

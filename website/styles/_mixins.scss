@@ -1,0 +1,62 @@
+@import "./variables";
+
+// Breakpoints
+@mixin smMinBreakPoint {
+  @media (min-width: #{$screen-sm}) {
+    @content;
+  }
+}
+
+@mixin mdMinBreakPoint {
+  @media (min-width: #{$screen-md}) {
+    @content;
+  }
+}
+
+@mixin lgMinBreakPoint {
+  @media (min-width: #{$screen-lg}) {
+    @content;
+  }
+}
+
+@mixin xlMinBreakPoint {
+  @media (min-width: #{$screen-xl}) {
+    @content;
+  }
+}
+
+@mixin smMaxBreakPoint {
+  @media (max-width: #{$screen-sm - 1}) {
+    @content;
+  }
+}
+
+@mixin mdMaxBreakPoint {
+  @media (max-width: #{$screen-md - 1}) {
+    @content;
+  }
+}
+
+@mixin lgMaxBreakPoint {
+  @media (max-width: #{$screen-lg - 1}) {
+    @content;
+  }
+}
+
+@mixin xlMaxBreakPoint {
+  @media (max-width: #{$screen-xl - 1}) {
+    @content;
+  }
+}
+
+@mixin customMinBreakPoint($size) {
+  @media (min-width: $size+"px") {
+    @content;
+  }
+}
+
+@mixin customMaxBreakPoint($size) {
+  @media (max-width: $size+"px") {
+    @content;
+  }
+}

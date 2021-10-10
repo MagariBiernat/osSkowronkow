@@ -1,0 +1,19 @@
+.Wrapper {
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1,
+  h2,
+  button {
+    margin-top: 32px;
+  }
+  button {
+    color: #fff;
+    padding: 12px 28px;
+    font-size: 1.4rem;
+  }
+}

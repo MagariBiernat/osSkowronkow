@@ -1,0 +1,37 @@
+@import "./colors";
+button {
+  font-family: "Nexa";
+  background: $black;
+  border: 1px solid $black;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 15px $black;
+  border-radius: 9px;
+  color: $white;
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgba(43, 43, 43, 0.7);
+  border: 1px solid $black;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 15px $black;
+  border-radius: 9px;
+}
+button.active {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #2b2b2b;
+  box-sizing: border-box;
+  box-shadow: inset 0px 3px 15px #2b2b2b;
+  border-radius: 9px;
+  color: $black;
+}
+
+button.secondary {
+  background: $white;
+  border: 1px solid $white;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 15px $black;
+  border-radius: 9px;
+  color: $black;
+}

@@ -1,0 +1,186 @@
+@import "../styles/colors";
+@import "../styles/mixins";
+
+.HeaderWrapper {
+  position: relative;
+  width: 100vw;
+  max-height: 690px;
+  //   background: red;
+
+  img {
+    width: 100%;
+  }
+}
+
+.SliderElement {
+  max-height: 690px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.HeaderInfo {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  background: $black;
+  opacity: 0.8;
+  border-radius: 2px;
+  backdrop-filter: blur(4px);
+  z-index: 1;
+
+  @include customMaxBreakPoint(1360) {
+    left: 40%;
+  }
+
+  @include lgMaxBreakPoint {
+    top: 40%;
+    left: 25%;
+  }
+
+  @include mdMaxBreakPoint {
+    top: 55%;
+    left: 50%;
+    width: 80vw;
+    transform: translateX(-50%);
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 35px;
+    z-index: 6;
+    text-align: center;
+
+    color: $white;
+
+    @include lgMaxBreakPoint {
+      padding: 25px 30px;
+    }
+
+    @include mdMaxBreakPoint {
+      padding: 20px 25px;
+    }
+
+    @include smMaxBreakPoint {
+      padding: 15px 20px;
+    }
+  }
+
+  h1 {
+    line-height: 70px;
+
+    @include customMaxBreakPoint(1160) {
+      font-size: 48px;
+      line-height: 60px;
+    }
+
+    @include customMaxBreakPoint(990) {
+      font-size: 42px;
+      line-height: 52px;
+    }
+
+    @include lgMaxBreakPoint {
+      font-size: 38px;
+      line-height: 48px;
+    }
+
+    @include mdMaxBreakPoint {
+      font-size: 28px;
+      line-height: 40px;
+    }
+
+    @include smMaxBreakPoint {
+      font-size: 18px;
+      line-height: 32px;
+    }
+  }
+
+  p.Wymiar {
+    font-size: 36px;
+    line-height: 43px;
+
+    @include customMaxBreakPoint(1160) {
+      font-size: 34px;
+      line-height: 40px;
+    }
+
+    @include customMaxBreakPoint(990) {
+      font-size: 32px;
+      line-height: 38px;
+    }
+
+    @include lgMaxBreakPoint {
+      font-size: 26px;
+      line-height: 32px;
+    }
+
+    @include mdMaxBreakPoint {
+      font-size: 22px;
+      line-height: 28px;
+    }
+
+    @include smMaxBreakPoint {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  p {
+    margin-top: 14px;
+    font-size: 20px;
+    line-height: 24px;
+
+    @include lgMaxBreakPoint {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    @include mdMaxBreakPoint {
+      font-size: 16px;
+      line-height: 20px;
+      margin-top: 8px;
+    }
+
+    @include smMaxBreakPoint {
+      font-size: 14px;
+      line-height: 20px;
+      margin-top: 6px;
+    }
+  }
+
+  h2 {
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 43px;
+    margin-top: 14px;
+
+    @include customMaxBreakPoint(1160) {
+      font-size: 32px;
+      line-height: 36px;
+    }
+
+    @include customMaxBreakPoint(990) {
+      font-size: 28px;
+      line-height: 32px;
+    }
+
+    @include lgMaxBreakPoint {
+      font-size: 26px;
+      line-height: 30px;
+    }
+
+    @include mdMaxBreakPoint {
+      font-size: 20px;
+      line-height: 22px;
+    }
+
+    @include smMaxBreakPoint {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+}
