@@ -31,7 +31,7 @@ const Header = () => {
           <Slider {...sliderSettings}>
             {images.map((item, index) => (
               <div className={styles.SliderElement} key={index}>
-                <img src={item} />
+                <img src={item} alt="Apartamenty Wesoła" />
               </div>
             ))}
           </Slider>
@@ -42,9 +42,12 @@ const Header = () => {
                 <br /> ZA ROZSĄDNĄ CENĘ
               </h1>
               <p className={styles.Wymiar}>nowy wymiar domu</p>
-              <p>Zadzwoń teraz</p>
-              <h2>606 467 817</h2>
-              <h2>606 691 578</h2>
+              <p>
+                {" "}
+                <a href="tel:606467817">Zadzwoń teraz</a>
+              </p>
+              <a href="tel:606467817">606 467 817</a>
+              <a href="tel:606691578">606 691 578</a>
             </div>
           </div>
         </div>

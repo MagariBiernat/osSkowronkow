@@ -2,8 +2,6 @@ import React from "react"
 import styles from "./Contact.module.scss"
 
 import LogoBorysDeweloper from "@public/images/LogoBorysDeweloper.png"
-import ContactImage from "@public/images/Contact.png"
-
 import ContactMap from "@public/images/ContactMap.png"
 import GmailLogo from "@public/icons/Gmail logo.png"
 import Marker from "@public/icons/Marker.png"
@@ -28,7 +26,8 @@ const Contact = () => {
             <div>
               <img src={Mobile} alt="Telefon" />
               <p className={styles.Bold}>
-                +48 600 467 817 <br /> +48 606 691 578
+                <a href="tel:600467817">+48 600 467 817</a> <br />{" "}
+                <a href="tel:606691578">+48 606 691 578</a>
               </p>
             </div>
             <div>

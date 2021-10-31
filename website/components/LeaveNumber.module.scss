@@ -1,0 +1,65 @@
+.Wrapper {
+  position: relative;
+  width: 100%;
+
+  h1 {
+    width: 85vw;
+    max-width: 720px;
+    font-size: 1.7rem;
+    text-align: center;
+    line-height: 42px;
+    margin: 0 auto;
+  }
+}
+
+.Form {
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  margin: 0 auto;
+  display: grid;
+
+  input,
+  button {
+    padding: 16px 12px;
+    margin: 12px 0;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  button {
+    padding: 16px 12px;
+    margin-bottom: 42px;
+    transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  > div {
+    margin: 12px 4px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+  }
+
+  input[type="checkbox"] {
+    text-align: center;
+    margin: auto auto;
+    grid-column: span 2;
+    transform: scale(1.2);
+  }
+
+  label {
+    font-size: 0.8rem;
+    font-style: italic;
+    grid-column: span 8;
+  }
+
+  button:disabled {
+    background: grey;
+    border-color: grey;
+  }
+}
+
+.Politics {
+  cursor: pointer;
+  text-decoration: underline;
+  color: crimson;
+}

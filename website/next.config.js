@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 const withPlugins = require("next-compose-plugins")
 const optimizedImages = require("next-optimized-images")
-
+const fs = require("fs")
 const nextConfig = {
   webpack: (config, options) => {
     return config
@@ -15,6 +15,9 @@ const nextConfig = {
   images: {
     disableStaticImages: true,
   },
+  env: {
+    rawJsFromFile: fs.readFileSync("./facebookCode.js").toString(),
+  },
   trailingSlash: true,
   exportPathMap: async function (
     defaultPathMap,
@@ -22,6 +25,7 @@ const nextConfig = {
   ) {
     return {
       "/": { page: "/" },
+      "/404": { page: "/404" },
     }
   },
 }

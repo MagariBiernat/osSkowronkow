@@ -12,7 +12,7 @@ const Navigation = () => {
     <nav className={styles.NavWrapper}>
       <div className="content">
         <div className={styles.NavbarLogo}>
-          <img src={Logo} />
+          <img src={Logo} alt="Apartamenty Wesoła" />
         </div>
         <div className={styles.Menu}>
           <ul>
@@ -47,7 +47,7 @@ const Navigation = () => {
               { [styles.slideOut]: !mobileOpen },
             ])}
           >
-            <ul>
+            <ul className={cn([{ [styles.MobileOpen]: !mobileOpen }])}>
               <li>
                 <Link
                   to="investment"

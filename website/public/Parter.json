@@ -1,0 +1,209 @@
+[
+  {
+    "numer": "A0",
+    "floor": "Parter",
+    "rooms": 3,
+    "yardage": 69.5,
+    "garden": 150,
+    "status": true,
+    "previewLink": "/pdf/A0 parter 69,50.pdf"
+  },
+  {
+    "numer": "B0",
+    "floor": "Parter",
+    "rooms": 3,
+    "yardage": 63.24,
+    "garden": 80,
+    "status": true,
+    "previewLink": "/pdf/B0 parter 63,24.pdf"
+  },
+  {
+    "numer": "C0",
+    "floor": "Parter",
+    "rooms": 3,
+    "yardage": 69.5,
+    "garden": 150,
+    "status": true,
+    "previewLink": "/pdf/C0 parter 69,50.pdf"
+  },
+  {
+    "numer": "D0",
+    "floor": "Parter",
+    "rooms": 3,
+    "yardage": 63.1,
+    "garden": 60,
+    "status": true,
+    "previewLink": "/pdf/D0 parter 63,10.pdf"
+  },
+  {
+    "numer": "E0",
+    "floor": "Parter",
+    "rooms": 3,
+    "yardage": 53.87,
+    "garden": 30,
+    "status": true,
+    "previewLink": "/pdf/E0 parter 53,87.pdf"
+  },
+  {
+    "numer": "F0",
+    "floor": "Parter",
+    "rooms": 3,
+    "yardage": 63.1,
+    "garden": 30,
+    "status": true,
+    "previewLink": "/pdf/F0 parter 63,10.pdf"
+  },
+  {
+    "numer": "G0",
+    "floor": "Parter",
+    "rooms": 3,
+    "yardage": 69.5,
+    "garden": 80,
+    "status": true,
+    "previewLink": "/pdf/G0 parter 69,50.pdf"
+  },
+  {
+    "numer": "H0",
+    "floor": "Parter",
+    "rooms": 3,
+    "yardage": 63.1,
+    "garden": 80,
+    "status": true,
+    "previewLink": "/pdf/H0 parter 36,10.pdf"
+  },
+  {
+    "numer": "I0",
+    "floor": "Parter",
+    "rooms": 3,
+    "yardage": 53.87,
+    "garden": 30,
+    "status": true,
+    "previewLink": "/pdf/I0 parter 53,87.pdf"
+  },
+  {
+    "numer": "J0",
+    "floor": "Parter",
+    "rooms": 3,
+    "yardage": 63.1,
+    "garden": 30,
+    "status": true,
+    "previewLink": "/pdf/J0 parter 63,10.pdf"
+  },
+  {
+    "numer": "K0",
+    "floor": "Parter",
+    "rooms": 3,
+    "yardage": 69.5,
+    "garden": 110,
+    "status": true,
+    "previewLink": "/pdf/K0 parter 69,50.pdf"
+  },
+  {
+    "numer": "L0",
+    "floor": "Parter",
+    "rooms": 3,
+    "yardage": 63.1,
+    "garden": 80,
+    "status": true,
+    "previewLink": "/pdf/L0 parter 63,10.pdf"
+  },
+  {
+    "numer": "M0",
+    "floor": "Parter",
+    "rooms": 3,
+    "yardage": 53.87,
+    "garden": 35,
+    "status": true,
+    "previewLink": "/pdf/M0 parter 53,87.pdf"
+  },
+  {
+    "numer": "N0",
+    "floor": "Parter",
+    "rooms": 3,
+    "yardage": 63.1,
+    "garden": 40,
+    "status": true,
+    "previewLink": "/pdf/N0 parter 63,10.pdf"
+  },
+  {
+    "numer": "O0",
+    "floor": "Parter",
+    "rooms": 3,
+    "yardage": 63.24,
+    "garden": 35,
+    "status": true,
+    "previewLink": "/pdf/O0 parter 63,24.pdf"
+  },
+  {
+    "numer": "P0",
+    "floor": "Parter",
+    "rooms": 3,
+    "yardage": 69.5,
+    "garden": 40,
+    "status": true,
+    "previewLink": "/pdf/P0 parter 69,50.pdf"
+  },
+  {
+    "numer": "Q0",
+    "floor": "Parter",
+    "rooms": 3,
+    "yardage": 63.24,
+    "garden": 45,
+    "status": true,
+    "previewLink": "/pdf/Q0 parter 63,24.pdf"
+  },
+  {
+    "numer": "R0",
+    "floor": "Parter",
+    "rooms": 3,
+    "yardage": 69.5,
+    "garden": 180,
+    "status": true,
+    "previewLink": "/pdf/R0 parter 69,50.pdf"
+  },
+  {
+    "numer": "S0",
+    "floor": "Parter",
+    "rooms": 3,
+    "yardage": 63.1,
+    "garden": 120,
+    "status": true,
+    "previewLink": "/pdf/S0 parter 63,10.pdf"
+  },
+  {
+    "numer": "T0",
+    "floor": "Parter",
+    "rooms": 3,
+    "yardage": 53.87,
+    "garden": 37,
+    "status": true,
+    "previewLink": "/pdf/T0 parter 53,87.pdf"
+  },
+  {
+    "numer": "U0",
+    "floor": "Parter",
+    "rooms": 3,
+    "yardage": 63.1,
+    "garden": 30,
+    "status": true,
+    "previewLink": "/pdf/U0 parter 63,10.pdf"
+  },
+  {
+    "numer": "V0",
+    "floor": "Parter",
+    "rooms": 3,
+    "yardage": 53.87,
+    "garden": 35,
+    "status": true,
+    "previewLink": "/pdf/V0 parter 53,87.pdf"
+  },
+  {
+    "numer": "W0",
+    "floor": "Parter",
+    "rooms": 3,
+    "yardage": 63.1,
+    "garden": 75,
+    "status": true,
+    "previewLink": "/pdf/W0 parter 63,10.pdf"
+  }
+]

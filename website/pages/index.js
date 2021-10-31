@@ -7,6 +7,8 @@ import Gallery from "@components/Gallery"
 import Contact from "@components/Contact"
 
 import Slide from "@components/Slide"
+import FBIcon from "@components/FBIcon"
+import LeaveNumber from "@components/LeaveNumber"
 
 const Index = () => {
   return (
@@ -21,9 +23,13 @@ const Index = () => {
       <Slide duration={0.8} from={"left"}>
         <Gallery />
       </Slide>
+      <Slide duration={0.6} from={"left"}>
+        <LeaveNumber />
+      </Slide>
       <Slide duration={0.6} from={"right"}>
         <Contact />
       </Slide>
+      <FBIcon />
     </Layout>
   )
 }

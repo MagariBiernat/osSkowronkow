@@ -9,13 +9,27 @@ import { animateScroll as scroll, Link } from "react-scroll"
 import PreviewIcon from "@public/icons/Preview.png"
 import AskIcon from "@public/icons/Ask.png"
 
-// import Parter from "@data/Parter"
-import pietro from "@public/data/Pietro.json"
-import parter from "@public/data/Parter.json"
 const Offer = () => {
   const [floor, setFloor] = React.useState("parter")
   const [showMore, setShowMore] = React.useState(false)
+  const [pietro, setPietro] = React.useState(null)
+  const [parter, setParter] = React.useState(null)
 
+  React.useEffect(() => {
+    const getPietro = async () => {
+      await fetch("/Pietro.json")
+        .then((res) => res.json())
+        .then((res) => setPietro(res))
+    }
+
+    const getParter = async () => {
+      await fetch("/Parter.json")
+        .then((res) => res.json())
+        .then((res) => setParter(res))
+    }
+    getPietro()
+    getParter()
+  }, [])
   const handleGoBottom = () => {
     scroll.scrollToBottom()
   }
@@ -29,7 +43,9 @@ const Offer = () => {
               alt="Apartamenty Wesoła"
               className={styles.ContentTopLogo}
             />
-            <h1 className={styles.ContentTopTitle}>Nasza oferta</h1>
+            <h1 className={styles.ContentTopTitle}>
+              Mieszkania na sprzedaż w naszej ofercie
+            </h1>
             <img
               src={OfertaZdjecie}
               alt="Apartamenty Wesoła"
@@ -41,13 +57,13 @@ const Offer = () => {
                 className={floor === "parter" ? "active" : undefined}
                 onClick={() => setFloor("parter")}
               >
-                Parter
+                <h5>Parter</h5>
               </button>
               <button
                 className={floor === "pietro" ? "active" : undefined}
                 onClick={() => setFloor("pietro")}
               >
-                Piętro
+                <h5>Piętro</h5>
               </button>
             </div>
             <p className={styles.ContentP}>Wybierz mieszkanie</p>
@@ -66,6 +82,7 @@ const Offer = () => {
                 <tr>
                   <th>Numer</th>
                   <th>Poziom</th>
+                  <th>Liczba pokoi</th>
                   <th>
                     Metraż
                     <br />
@@ -87,12 +104,16 @@ const Offer = () => {
                       <tr key={index}>
                         <td>{item.numer}</td>
                         <td>{item.floor}</td>
+                        <td>{item.rooms}</td>
                         <td>{item.yardage}</td>
                         <td>{item.garden}</td>
                         <td>{item.status ? "Dostępne" : "Niedostępne"}</td>
                         <td>
                           <a href={item.previewLink} target="_blank">
-                            <img src={PreviewIcon} alt="" />
+                            <img
+                              src={PreviewIcon}
+                              alt="Apartamenty Dębica mieszkanie sprzedaż"
+                            />
                           </a>
                         </td>
                         <td>
@@ -110,12 +131,16 @@ const Offer = () => {
                       <tr key={index}>
                         <td>{item.numer}</td>
                         <td>{item.floor}</td>
+                        <td>{item.rooms}</td>
                         <td>{item.yardage}</td>
-                        <td>{item.garden}</td>
+                        <td>{item.garden ? item.garden : "Brak"}</td>
                         <td>{item.status ? "Dostępne" : "Niedostępne"}</td>
                         <td>
                           <a href={item.previewLink} target="_blank">
-                            <img src={PreviewIcon} alt="" />
+                            <img
+                              src={PreviewIcon}
+                              alt="Apartamenty Dębica mieszkanie sprzedaż"
+                            />
                           </a>
                         </td>
                         <td>
@@ -137,20 +162,5 @@ const Offer = () => {
     </>
   )
 }
-
-// export async function getStaticProps() {
-//   const res = await fetch("data/Parter.json")
-//   const parter = await res.json()
-
-//   const resPietro = await fetch("data/Pietro.json")
-//   const pietro = await resPietro.json()
-
-//   return {
-//     props: {
-//       parter,
-//       pietro,
-//     },
-//   }
-// }
 
 export default Offer

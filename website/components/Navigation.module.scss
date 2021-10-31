@@ -167,3 +167,11 @@ $height: 130px;
     opacity: 1;
   }
 }
+
+ul.MobileOpen {
+  li,
+  p,
+  a {
+    z-index: -999;
+  }
+}
