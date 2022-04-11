@@ -11,15 +11,15 @@ import image10 from "./j.jpg"
 import image11 from "./k.jpg"
 
 export default [
-  { source: image1 },
-  { source: image2 },
-  { source: image3 },
-  { source: image4 },
-  { source: image5 },
-  { source: image6 },
-  { source: image7 },
-  { source: image8 },
-  { source: image9 },
-  { source: image10 },
-  { source: image11 },
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+  image6,
+  image7,
+  image8,
+  image9,
+  image10,
+  image11,
 ]

@@ -2,8 +2,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 const withPlugins = require("next-compose-plugins")
-const optimizedImages = require("next-optimized-images")
+const withImages = require("next-images")
 const fs = require("fs")
+
 const nextConfig = {
   webpack: (config, options) => {
     return config
@@ -32,13 +33,13 @@ const nextConfig = {
 
 const config = withPlugins(
   [
-    [
-      optimizedImages,
-      {
-        // optimisation disabled by default, to enable check https://github.com/cyrilwanner/next-optimized-images
-        optimizeImages: false,
-      },
-    ],
+    withImages,
+    //   optimizedImages,
+    //   {
+    //     // optimisation disabled by default, to enable check https://github.com/cyrilwanner/next-optimized-images
+    //     optimizeImages: false,
+    //   },
+    // ],
   ],
   nextConfig
 )

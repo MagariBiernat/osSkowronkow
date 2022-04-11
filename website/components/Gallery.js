@@ -3,14 +3,19 @@ import React from "react"
 import styles from "./Gallery.module.scss"
 import Logo from "@public/images/logo-wesola-navbar.png"
 
-import Lightbox from "react-image-lightbox"
-
 import ImagesArray from "@public/gallery"
 import ImagesFullSizeArray from "@public/galleryFullSize"
 
+import Carousel, { Modal, ModalGateway } from "react-images"
+
 const Gallery = () => {
-  const [selectedImage, setSelectedImage] = React.useState(-1)
+  const [selectedImage, setSelectedImage] = React.useState(0)
   const [isOpen, setIsOpen] = React.useState(false)
+
+  const closeLightbox = () => {
+    setSelectedImage(0)
+    setIsOpen(false)
+  }
 
   return (
     <>
@@ -22,7 +27,7 @@ const Gallery = () => {
             <div className={styles.Gallery}>
               {ImagesArray.map((item, index) => (
                 <img
-                  src={item}
+                  src={item.source}
                   alt={`Apartamenty Dębica mieszkanie sprzedaż`}
                   key={index}
                   onClick={() => {
@@ -35,33 +40,16 @@ const Gallery = () => {
           </div>
         </div>
       </div>
-      {isOpen && (
-        <Lightbox
-          enableZoom={false}
-          mainSrc={ImagesFullSizeArray[selectedImage]}
-          nextSrc={
-            ImagesFullSizeArray[
-              (selectedImage + 1) % ImagesFullSizeArray.length
-            ]
-          }
-          prevSrc={
-            ImagesFullSizeArray[
-              (selectedImage + ImagesFullSizeArray.length - 1) %
-                ImagesFullSizeArray.length
-            ]
-          }
-          onCloseRequest={() => setIsOpen(!isOpen)}
-          onMovePrevRequest={() =>
-            setSelectedImage(
-              (selectedImage + ImagesFullSizeArray.length - 1) %
-                ImagesFullSizeArray.length
-            )
-          }
-          onMoveNextRequest={() =>
-            setSelectedImage((selectedImage + 1) % ImagesFullSizeArray.length)
-          }
-        />
-      )}
+      <ModalGateway>
+        {isOpen ? (
+          <Modal onClose={closeLightbox}>
+            <Carousel
+              currentIndex={selectedImage}
+              views={ImagesFullSizeArray}
+            />
+          </Modal>
+        ) : null}
+      </ModalGateway>
     </>
   )
 }

@@ -38,16 +38,19 @@ const Navigation = () => {
             </li>
           </ul>
         </div>
-        <div className={styles.MenuMobile}>
+        <div className={`${styles.MenuMobile}`}>
           <Hamburger onClick={() => setMobileOpen(!mobileOpen)} />
           <div
-            className={cn([
-              styles.MenuMobileContent,
-              { [styles.slideIn]: mobileOpen },
-              { [styles.slideOut]: !mobileOpen },
-            ])}
+            className={`${styles.MenuMobileContent} 
+              ${mobileOpen ? styles.MobileOpen : styles.IndexMinus}
+              ${mobileOpen ? styles.slideIn : styles.slideOut}
+             `}
           >
-            <ul className={cn([{ [styles.MobileOpen]: !mobileOpen }])}>
+            <ul
+              className={`${
+                mobileOpen ? styles.MobileOpen : styles.MobileNotOpen
+              }`}
+            >
               <li>
                 <Link
                   to="investment"

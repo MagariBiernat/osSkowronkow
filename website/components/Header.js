@@ -44,9 +44,9 @@ const Header = () => {
               <p className={styles.Wymiar}>nowy wymiar domu</p>
               <p>
                 {" "}
-                <a href="tel:606467817">Zadzwoń teraz</a>
+                <a href="tel:600467817">Zadzwoń teraz</a>
               </p>
-              <a href="tel:606467817">606 467 817</a>
+              <a href="tel:600467817">600 467 817</a>
               <a href="tel:606691578">606 691 578</a>
             </div>
           </div>

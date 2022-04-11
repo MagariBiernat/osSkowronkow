@@ -116,7 +116,6 @@ $height: 130px;
     height: auto;
     background: #ffffff;
     box-shadow: 0px 30px 42px -32px rgba(0, 0, 0, 0.45);
-    z-index: 0;
     padding: 62px 0;
 
     > ul {
@@ -168,10 +167,18 @@ $height: 130px;
   }
 }
 
-ul.MobileOpen {
-  li,
-  p,
-  a {
-    z-index: -999;
+.MobileOpen {
+  z-index: 10 !important;
+}
+
+.MobileNotOpen {
+  z-index: -9 !important;
+}
+
+.IndexMinus {
+  display: none !important;
+  z-index: -9 !important;
+  * {
+    z-index: -9 !important;
   }
 }
